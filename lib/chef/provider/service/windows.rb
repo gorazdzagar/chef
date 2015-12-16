@@ -241,7 +241,7 @@ class Chef::Provider::Service::Windows < Chef::Provider::Service
 [Unicode]
 Unicode=yes
 [Privilege Rights]
-SeServiceLogonRight = \\\\#{canonicalize_username(username)},*S-1-5-80-0
+SeServiceLogonRight = #{canonicalize_username(username)},*S-1-5-80-0
 [Version]
 signature="$CHICAGO$"
 Revision=1

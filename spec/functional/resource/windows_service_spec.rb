@@ -23,7 +23,7 @@ describe Chef::Resource::WindowsService, :windows_only, :system_windows_service_
   include_context "using Win32::Service"
 
   let(:username) { "service_spec_user"}
-  let(:qualified_username) { ".\\#{username}"}
+  let(:qualified_username) { "#{ENV['COMPUTERNAME']}\\#{username}"}
   let(:password) { "1a2b3c4X!&narf"}
 
   let(:user_resource) {
